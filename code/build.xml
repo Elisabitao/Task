@@ -4,7 +4,8 @@
   <!-- Configure path to GWT SDK -->
   <property environment="env"/>
   <property name="gwt.sdk" value="${env.GWT_HOME}"/>
-  <property name="build.home" value="C:/Users/Jack/lexemus/noumenon/Task"/>
+  <property name="lexemus.dev" value="${env.LEXEMUS_DEV}"/>
+  <property name="build.home" value="C:/Users/Jack/lexemus/developer/Task"/>
   <property name="build.dir" value="${build.home}/war"/>
 
   <fail unless="gwt.sdk" message="You must set the GWT_HOME environment variable to point to your GWT SDK"/>
