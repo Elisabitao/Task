@@ -96,28 +96,28 @@ public class TeamBoardPanel extends Panel {
         divider.setWidth(1);
         panel.add(divider);
         
-        Panel inprogress=new Panel("<center>In Progress</center>");
+        Panel inprogress=new Panel("<center>In Progress 2</center>");
         inprogress.setBorder(false);
         panel.add(inprogress, new ColumnLayoutData(.2));
         Panel divider1 = new Panel("1");
         divider1.setWidth(1);
         panel.add(divider1);
 
-        Panel intest=new Panel("<center>In Test</center>");
+        Panel intest=new Panel("<center>In Test 1</center>");
         intest.setBorder(false);
         panel.add(intest, new ColumnLayoutData(.2));
         Panel divider2 = new Panel("1");
         divider2.setWidth(1);
         panel.add(divider2);
 
-        Panel done=new Panel("<center>Done</center>");
+        Panel done=new Panel("<center>COMPLETED</center>");
         done.setBorder(false);
         panel.add(done, new ColumnLayoutData(.2));
         Panel divider3 = new Panel("1");
         divider3.setWidth(1);
         panel.add(divider3);
 
-        Panel accepted=new Panel("<center>Accepted</center>");
+        Panel accepted=new Panel("<center>Accepted OK</center>");
         accepted.setBorder(false);
         panel.add(accepted, new ColumnLayoutData(.2));
         return panel;

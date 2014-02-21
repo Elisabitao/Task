@@ -3,9 +3,9 @@
 <project name="Task" default="build" basedir=".">
   <!-- Configure path to GWT SDK -->
   <property environment="env"/>
-  <property name="gwt.sdk" value="${env.GWT_HOME}"/>
+  <property name="gwt.sdk" value="/root/lexemus/developer/gwt"/>
   <property name="lexemus.dev" value="${env.LEXEMUS_DEV}"/>
-  <property name="build.home" value="C:/Users/Jack/lexemus/developer/Task"/>
+  <property name="build.home" value="/root/lexemus/developer/Task"/>
   <property name="build.dir" value="${build.home}/war"/>
 
   <fail unless="gwt.sdk" message="You must set the GWT_HOME environment variable to point to your GWT SDK"/>
@@ -21,8 +21,8 @@
   </path>
 
   <target name="libs" description="Copy libs to WEB-INF/lib">
-    <!-- <mkdir dir="${build.home}/war/WEB-INF/lib" />
-    <copy todir="war/WEB-INF/lib" file="${gwt.sdk}/gwt-servlet.jar" /> -->
+    <mkdir dir="${build.home}/war/WEB-INF/lib" />
+    <copy todir="war/WEB-INF/lib" file="${gwt.sdk}/gwt-servlet.jar" />
   </target>
 
   <target name="javac" depends="libs" description="Compile java source">
@@ -54,10 +54,12 @@
     </java>
   </target>
 
-  <target name="build" depends="gwtc" description="Build this project" />
+  <target name="build" depends="gwtc" description="Build this project">
+    <zip destfile="/usr/share/apache-tomcat-7.0.42/webapps/taskboard.war" basedir="${build.home}/war"/>
+  </target>
 
   <target name="war" depends="build" description="Create a war file">
-    <zip destfile="task.war" basedir="${build.home}/war"/>
+    <zip destfile="/usr/share/apache-tomcat-7.0.42/webapps/taskboard.war" basedir="${build.home}/war"/>
   </target>
 
   <target name="clean" description="Cleans this project">

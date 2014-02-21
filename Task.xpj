@@ -4,6 +4,7 @@ Task/stories/in progress/
 Task/stories/in test/
 Task/stories/completed/
 Task/stories/accepted/
+Task/stories/done/
 Task/code/
 Task/code/src/
 Task/code/src/com/
@@ -34,6 +35,7 @@ Task/code/src/com/lexemus/task/public/resources/css/
 Task/code/src/com/lexemus/task/public/resources/css/xtheme-gray.css
 Task/code/src/com/lexemus/task/public/resources/css/panel.css
 Task/code/src/com/lexemus/task/public/resources/css/ext-all.css
+Task/code/src/com/lexemus/task/public/index.html
 Task/code/src/com/lexemus/task/client/
 Task/code/src/com/lexemus/task/client/TeamBoardPanel.java
 Task/code/src/com/lexemus/task/client/ProjectData.java
@@ -46,11 +48,10 @@ Task/code/src/com/lexemus/task/client/ExplorerTreeNode.java
 Task/code/src/com/lexemus/task/client/Console.java
 Task/code/src/com/lexemus/task/client/Callback.java
 Task/code/src/com/lexemus/task/Task.gwt.xml
+Task/code/src/index.html
 Task/code/lib/
 Task/code/lib/gwtext.jar
-Task/code/lib/gwt-servlet.jar
 Task/code/bin/
 Task/code/build.xml
 Task/resources/
 Task/Task.xpj
-Task/README.md
