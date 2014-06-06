@@ -3,10 +3,12 @@
 <project name="Task" default="build" basedir=".">
   <!-- Configure path to GWT SDK -->
   <property environment="env"/>
-  <property name="gwt.sdk" value="/root/lexemus/developer/gwt"/>
-  <property name="lexemus.dev" value="${env.LEXEMUS_DEV}"/>
-  <property name="build.home" value="/root/lexemus/developer/Task"/>
+  <property name="gwt.sdk" value="${lexemus.lib}/gwt"/>
+  <property name="build.home" value="${user.home}/Task"/>
   <property name="build.dir" value="${build.home}/war"/>
+  <echo message="lexemus.home: ${lexemus.home}" />
+  <echo message="lexemus.lib: ${lexemus.lib}" />
+  <echo message="build.home: ${build.home}" />
 
   <fail unless="gwt.sdk" message="You must set the GWT_HOME environment variable to point to your GWT SDK"/>
 
@@ -45,7 +47,7 @@
         <path refid="project.class.path"/>
       </classpath>
       <!-- add jvmarg -Xss16M or similar if you see a StackOverflowError -->
-        <jvmarg value="-Xmx600M"/>
+        <jvmarg value="-Xmx256M"/>
         <jvmarg value="-Xss32M"/>
       <!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
       <arg value="com.lexemus.task.Task"/>
@@ -55,17 +57,6 @@
   </target>
 
   <target name="build" depends="gwtc" description="Build this project">
-    <zip destfile="/usr/share/apache-tomcat-7.0.42/webapps/taskboard.war" basedir="${build.home}/war"/>
-  </target>
-
-  <target name="war" depends="build" description="Create a war file">
-    <zip destfile="/usr/share/apache-tomcat-7.0.42/webapps/taskboard.war" basedir="${build.home}/war"/>
-  </target>
-
-  <target name="clean" description="Cleans this project">
-	<delete dir="${build.home}/war/WEB-INF/classes/com" failonerror="false" />
-
-    <delete dir="${build.home}/war/task" failonerror="false" />
   </target>
 
 </project>
